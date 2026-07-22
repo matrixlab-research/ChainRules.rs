@@ -6,7 +6,10 @@ rust-version = "1.85"
 license = "MIT"
 description = "Backend-agnostic JVP and VJP rule protocol for scientific Rust"
 repository = "https://github.com/matrixlab-research/ChainRules.rs"
+homepage = "https://github.com/matrixlab-research/ChainRules.rs"
+documentation = "https://docs.rs/chainrules-core"
 readme = "README.md"
+publish = ["crates-io"]
 keywords = ["autodiff", "jvp", "vjp", "scientific-computing"]
 categories = ["science", "mathematics"]
 

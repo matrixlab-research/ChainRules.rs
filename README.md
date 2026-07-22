@@ -1,6 +1,8 @@
 # ChainRules.rs
 
 [![CI](https://github.com/matrixlab-research/ChainRules.rs/actions/workflows/ci.yml/badge.svg)](https://github.com/matrixlab-research/ChainRules.rs/actions/workflows/ci.yml)
+[![Crates.io](https://img.shields.io/crates/v/chainrules-core.svg)](https://crates.io/crates/chainrules-core)
+[![Documentation](https://docs.rs/chainrules-core/badge.svg)](https://docs.rs/chainrules-core)
 [![Rust 1.85+](https://img.shields.io/badge/rust-1.85%2B-orange.svg)](https://www.rust-lang.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -63,12 +65,11 @@ borrow inputs or cached data instead of cloning large scientific arrays.
 
 ## Getting started
 
-The crate has not been published to crates.io. Use the Git repository while the
-protocol is being developed:
+Add the crate to your project:
 
 ```toml
 [dependencies]
-chainrules-core = { git = "https://github.com/matrixlab-research/ChainRules.rs" }
+chainrules-core = "0.1"
 ```
 
 An operation can provide both forward- and reverse-mode rules:
