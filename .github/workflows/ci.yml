@@ -22,3 +22,5 @@ jobs:
         run: cargo test --all-targets
       - name: Test documentation
         run: cargo test --doc
+      - name: Verify release package
+        run: cargo package --locked
