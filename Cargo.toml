@@ -1,0 +1,17 @@
+[package]
+name = "chainrules-core"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "Backend-agnostic JVP and VJP rule protocol for scientific Rust"
+repository = "https://github.com/matrixlab-research/ChainRules.rs"
+readme = "README.md"
+keywords = ["autodiff", "jvp", "vjp", "scientific-computing"]
+categories = ["science", "mathematics"]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"
