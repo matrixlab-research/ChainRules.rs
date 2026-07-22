@@ -60,10 +60,7 @@ where
         &self,
         args: &Args,
         tangent: &Args::Tangent,
-    ) -> (
-        Self::Output,
-        <Self::Output as Differentiable>::Tangent,
-    );
+    ) -> (Self::Output, <Self::Output as Differentiable>::Tangent);
 }
 
 /// A reverse-mode pullback from an output cotangent to input cotangents.
@@ -93,10 +90,7 @@ where
     type Output: Differentiable;
 
     /// Pullback produced for one primal evaluation.
-    type Pullback<'a>: Pullback<
-        <Self::Output as Differentiable>::Tangent,
-        Args::Tangent,
-    >
+    type Pullback<'a>: Pullback<<Self::Output as Differentiable>::Tangent, Args::Tangent>
     where
         Self: 'a,
         Args: 'a;
@@ -145,9 +139,7 @@ pub mod testing {
 #[cfg(test)]
 mod tests {
     use super::{JvpRule, Pullback, VjpRule};
-    use crate::testing::{
-        assert_close, assert_scalar_adjoint_identity, central_difference,
-    };
+    use crate::testing::{assert_close, assert_scalar_adjoint_identity, central_difference};
 
     struct Square;
 
